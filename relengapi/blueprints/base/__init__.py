@@ -20,6 +20,7 @@ from relengapi.lib import subcommands
 
 bp = Blueprint('base', __name__)
 logger = logging.getLogger(__name__)
+__all__ = ['AlembicSubcommand', ]
 
 
 class ServeSubcommand(subcommands.Subcommand):
