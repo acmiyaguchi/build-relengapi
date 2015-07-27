@@ -4,12 +4,18 @@ Database Migrations
 Database migrations are handled through alembic through the command line tool ``relengapi alembic``.
 This tool is built based on Flask-Migrate_, and it's usage is roughly one to one.
 
+Manual management of the database without the relengapi tool can be done through alembic itself, by
+specifying the configuration file i.e. ``alembic -c relengapi/alembic/*/alembic.ini``.
 
 Command Reference
 -----------------
 
 ``relengapi alembic --help``
     Shows a list of available commands.
+
+
+``relengapi alembic DBNAME init``
+    Initializes migration support for the particular database.
 
 ``relengapi alebic DBNAME revision [--message MESSAGE] [--autogenerate] [--sql] [--head HEAD] [--splice] [--branch-label BRANCH_LABEL] [--version-path VERSION_PATH] [--rev-id REV_ID]``
     Creates an empty revision script. The script needs to be edited manually with the upgrade and
